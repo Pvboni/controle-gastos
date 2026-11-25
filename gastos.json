@@ -54,6 +54,14 @@
       "descricao": "compra",
       "valor": 1200,
       "data": "2026-12-15"
+    },
+    {
+      "id": "368ab7d3-ed36-4bd1-b4c8-e34245f7828e",
+      "categoria": "iFood",
+      "local": "Frangão",
+      "descricao": "",
+      "valor": 300,
+      "data": "2026-12-03"
     }
   ]
 }
