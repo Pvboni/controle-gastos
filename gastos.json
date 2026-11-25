@@ -38,6 +38,14 @@
       "local": "Sandubas",
       "descricao": "",
       "valor": 350
+    },
+    {
+      "id": "4af9a7fc-89d9-4bd3-bec1-f92b2efb29a3",
+      "categoria": "Mercado",
+      "local": "Moacyr",
+      "descricao": "compra",
+      "valor": 150,
+      "data": "2026-12-16"
     }
   ]
 }
