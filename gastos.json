@@ -20,14 +20,16 @@
       "categoria": "Mercado",
       "local": "Moacir",
       "descricao": "",
-      "valor": 1200
+      "valor": 1200,
+      "id": "legacy-1-4c26c8dd4c1c"
     },
     {
       "data": "2026-12-06",
       "categoria": "Farmácia",
       "local": "Farmácia Ipiranga",
       "descricao": "",
-      "valor": 350
+      "valor": 350,
+      "id": "legacy-2-4c26c8dd4c1c"
     }
   ]
 }
