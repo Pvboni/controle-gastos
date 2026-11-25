@@ -1,0 +1,33 @@
+{
+  "inicio": "2026-12",
+  "orcamento": {
+    "Mercado": 4500,
+    "iFood": 500,
+    "Farmácia": 500,
+    "Transporte": 800
+  },
+  "meses": {},
+  "lancamentos": [
+    {
+      "data": "2026-12-02",
+      "categoria": "Mercado",
+      "local": "Moacir",
+      "descricao": "",
+      "valor": 1200
+    },
+    {
+      "data": "2026-12-05",
+      "categoria": "Transporte",
+      "local": "Posto de gasolina",
+      "descricao": "Combustível",
+      "valor": 150
+    },
+    {
+      "data": "2026-12-06",
+      "categoria": "Farmácia",
+      "local": "Farmácia Ipiranga",
+      "descricao": "",
+      "valor": 350
+    }
+  ]
+}
