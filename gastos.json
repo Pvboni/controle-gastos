@@ -78,6 +78,30 @@
       "descricao": "",
       "valor": 30,
       "data": "2026-12-04"
+    },
+    {
+      "id": "28564c8b-c547-4d3b-be7c-8ace6e6090b7",
+      "categoria": "Mercado",
+      "local": "Moacyr",
+      "descricao": "gastos",
+      "valor": 150,
+      "data": "2026-12-02"
+    },
+    {
+      "id": "87bbe84f-f849-4afb-8cac-429561e9949d",
+      "categoria": "Farmácia",
+      "local": "Farmacia",
+      "descricao": "novaldina",
+      "valor": 20,
+      "data": "2026-12-02"
+    },
+    {
+      "id": "7a75baa2-65b0-43d2-b076-f44dae7b391d",
+      "categoria": "iFood",
+      "local": "Sandubans",
+      "descricao": "sandubans",
+      "valor": 100,
+      "data": "2026-12-02"
     }
   ]
 }
