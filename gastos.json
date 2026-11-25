@@ -70,6 +70,22 @@
       "descricao": "",
       "valor": 50,
       "data": "2026-12-01"
+    },
+    {
+      "id": "1ded6912-a8a0-43a1-a0c8-e4d84d39ec29",
+      "categoria": "iFood",
+      "local": "Frangão",
+      "descricao": "",
+      "valor": 50,
+      "data": "2026-12-03"
+    },
+    {
+      "id": "6bdeafa3-1a0b-4882-a661-7a95425d4675",
+      "categoria": "iFood",
+      "local": "Samdubans",
+      "descricao": "",
+      "valor": 30,
+      "data": "2026-12-04"
     }
   ]
 }
