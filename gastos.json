@@ -46,6 +46,14 @@
       "descricao": "compra",
       "valor": 150,
       "data": "2026-12-16"
+    },
+    {
+      "id": "cafed266-f8a4-46c2-9ec9-5ddf1f3686b0",
+      "categoria": "Mercado",
+      "local": "Moacir",
+      "descricao": "compra",
+      "valor": 1200,
+      "data": "2026-12-15"
     }
   ]
 }
