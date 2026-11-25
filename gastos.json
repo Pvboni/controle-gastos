@@ -30,6 +30,14 @@
       "descricao": "",
       "valor": 350,
       "id": "legacy-2-4c26c8dd4c1c"
+    },
+    {
+      "id": "0a90158d-7dc1-47a2-a1fd-b6c078329bbb",
+      "data": "2026-12-10",
+      "categoria": "iFood",
+      "local": "Sandubas",
+      "descricao": "",
+      "valor": 350
     }
   ]
 }
