@@ -6,7 +6,14 @@
     "Farmácia": 500,
     "Transporte": 800
   },
-  "meses": {},
+  "meses": {
+    "2026-12": {
+      "Mercado": 4509,
+      "iFood": 500,
+      "Farmácia": 500,
+      "Transporte": 800
+    }
+  },
   "lancamentos": [
     {
       "data": "2026-12-02",
