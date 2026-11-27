@@ -102,6 +102,14 @@
       "descricao": "sandubans",
       "valor": 100,
       "data": "2026-12-02"
+    },
+    {
+      "id": "e0ad3e6a-d9a1-4be8-b53b-60c66c9404f2",
+      "categoria": "Transporte",
+      "local": "Uber",
+      "descricao": "taxi",
+      "valor": 150,
+      "data": "2027-01-08"
     }
   ]
 }
