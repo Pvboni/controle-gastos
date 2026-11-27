@@ -1,0 +1,57 @@
+:root { color-scheme: light; }
+html[data-theme="dark"] { color-scheme: dark; --ice:#141b27; --slate:#e6e9ee; --paper:#202b3b; --border:#77859a; --muted:#c1cad7; }
+body { font-family: Inter, system-ui, -apple-system, sans-serif; }
+.theme-control { display:flex; align-items:center; gap:8px; margin:12px 0; font-size:14px; }
+.theme-control select { font:inherit; padding:8px; min-height:44px; border:1px solid var(--border); border-radius:var(--radius-control); background:var(--paper); color:var(--slate); }
+html[data-theme="dark"] button { background:#34445a; color:#fff; }
+html[data-theme="dark"] .summary, html[data-theme="dark"] .tile, html[data-theme="dark"] .tile.light, html[data-theme="dark"] #smartImpact, html[data-theme="dark"] #undoBox { background:#2a3547; color:#fff; }
+html[data-theme="dark"] .ledger { border-color:#536176; }
+html[data-theme="dark"] .ledger>.line, html[data-theme="dark"] .entry { border-color:#536176; }
+html[data-theme="dark"] .riskText, html[data-theme="dark"] .ledger .red { color:#ff92a4!important; }
+html[data-theme="dark"] #newEntry, html[data-theme="dark"] #sync, html[data-theme="dark"] #smartDialog #smartSave, html[data-theme="dark"] #smartDialog .smartTabs button:first-child { background:#f0284a; color:#182231; }
+html[data-theme="dark"] #local, html[data-theme="dark"] #editBudget, html[data-theme="dark"] .editEntry { background:transparent; color:var(--slate); }
+html[data-theme="dark"] dialog input, html[data-theme="dark"] #expenseForm select, html[data-theme="dark"] #smartDialog textarea, html[data-theme="dark"] #smartDialog select { background:#141b27; color:#fff; }
+:focus-visible { outline:3px solid #f0284a; outline-offset:3px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior:auto!important; transition-duration:0.01ms!important; animation-duration:0.01ms!important; animation-iteration-count:1!important; } }
+
+/* Shared surfaces and numeric alignment. */
+body { line-height:1.5; }
+.visually-hidden { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+.loading-placeholder { display:grid; gap:12px; min-height:130px; align-content:center; }
+.loading-placeholder i { display:block; height:14px; border-radius:8px; background:#ffffff35; }
+.loading-placeholder i:nth-child(2) { width:65%; height:30px; }
+.loading-placeholder i:nth-child(3) { width:85%; }
+.summary, .tile, .ledger, #assistantPanel { box-shadow:0 8px 26px #17233512; }
+.money, .heroPair b, .categoryMetric b, .entry b { font-variant-numeric:tabular-nums; }
+button, a, summary { transition:background-color .18s ease, color .18s ease, box-shadow .18s ease; }
+button:disabled { cursor:not-allowed; }
+#status { border-left:3px solid var(--border); padding:8px 12px; background:var(--paper); border-radius:4px 10px 10px 4px; }
+#status:empty { display:none; }
+#assistantPanel { background:var(--paper); color:var(--slate); }
+#aiQuick button, .aiAnswer { background:var(--paper); color:var(--slate); border-color:var(--border); }
+.aiAnswer { padding:18px; border-radius:18px; }
+.aiAnswer details { border-top:1px solid var(--border); margin-top:12px; padding-top:10px; }
+.aiAnswer summary { cursor:pointer; font-weight:650; }
+#aiNotice, #aiConfig, #aiClear { color:var(--muted); }
+#aiQuestion { background:var(--paper); color:var(--slate); }
+html[data-theme="dark"] #appTabs button { background:#34445a; color:#fff; }
+html[data-theme="dark"] #appTabs button[aria-selected=true] { background:#2a3547; }
+html[data-theme="dark"] .aiQuestion { background:#34445a; color:#fff; }
+html[data-theme="dark"] #aiSend { background:#f0284a; color:#182231; }
+html[data-theme="dark"] #disconnect { color:var(--muted)!important; }
+@media(max-width:600px) {
+  main { padding-bottom:100px; }
+  #appTabs { position:fixed; z-index:10; bottom:0; left:0; right:0; margin:0; padding:8px 12px max(8px,env(safe-area-inset-bottom)); background:var(--paper); border-top:1px solid var(--border); box-shadow:0 -6px 24px #17233518; }
+  #appTabs button { border-radius:12px; }
+  #smartDialog, #expenseDialog { position:fixed; inset:auto 0 0; margin:0; width:100%; max-width:none; max-height:90dvh; border-radius:22px 22px 0 0; padding:24px 20px max(24px,env(safe-area-inset-bottom)); }
+  #undoBox { bottom:82px; }
+}
+
+
+#premiumToasts{position:fixed;bottom:90px;left:12px;right:12px;z-index:30;pointer-events:none;display:grid;justify-items:center}.premium-toast{max-width:520px;background:#2a3547;color:white;border-radius:14px;padding:12px 18px;box-shadow:0 8px 24px #0003;animation:premium-in .18s ease-out}@keyframes premium-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}#premiumConfirm{max-width:min(420px,90vw);border-radius:20px}#premiumConfirm::backdrop{background:#10182799}#status[data-state=success]{border-color:#299b78}#status[data-state=pending]{border-color:#b78a24}#status[data-state=error]{border-color:#f0284a}.aiSuggestions{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}.aiSuggestions button{font-size:13px;background:var(--paper);color:var(--slate);border:1px solid var(--border);border-radius:24px}.summary .money{font-size:clamp(32px,7vw,48px);letter-spacing:-.04em}.tile{border-radius:20px}.tile:hover{box-shadow:0 10px 28px #1723351c}#premiumAdd{display:none}@media(max-width:600px){#premiumAdd{display:block}#appTabs button{min-width:0;font-size:13px}#smartDialog::before,#expenseDialog::before{content:'';display:block;width:36px;height:4px;border-radius:4px;background:var(--border);margin:0 auto 12px}}
+
+#appTabs .ph{font-size:20px;vertical-align:middle} .empty-premium{padding:18px;text-align:center;color:var(--muted);border:1px dashed var(--border);border-radius:14px} .empty-premium .ph{display:block;font-size:24px;margin-bottom:6px}
+
+#settingsPanel{background:var(--paper);color:var(--slate);padding:20px;border-radius:20px}#settingsPanel label{display:flex;align-items:center;gap:12px;min-height:44px}#settingsPanel input[type=checkbox]{width:22px;height:22px}#settingsData button,#privacyQuick,#tabSettings{min-height:44px}#settingsData .line{flex-wrap:wrap}html[data-motion=false] *,html[data-motion=false] *::before,html[data-motion=false] *::after{animation:none!important;transition:none!important}html[data-large=true] main{font-size:1.125rem}html[data-large=true] main small{font-size:0.95rem}html[data-privacy=true] #smartRows input,html[data-privacy=true] #expenseValue,html[data-privacy=true] #budgetFields input,html[data-privacy=true] #smartText,html[data-privacy=true] #aiQuestion{filter:blur(6px)}html[data-privacy=true] dialog pre{display:none}html[data-privacy=true] #aiChat .aiQuestion{filter:blur(6px)}[hidden]{display:none!important}@media(max-width:600px){#appTabs{gap:4px}#appTabs button{flex:1;padding:8px 4px;min-height:44px;font-size:12px}}
+
+#settingsPanel button,#settingsPanel select,#appTabs button,#prev,#next,#aiSend,#newEntry,#privacyQuick{min-height:44px}#prev,#next{min-width:44px}html[data-theme=dark] #settingsPanel{color:#e6e9ee}html[data-theme=dark] #settingsPanel button{color:#fff}html[data-theme=dark] #settingsPanel small{color:#c1cad7}html[data-privacy=true] #aiChat .aiQuestion,html[data-privacy=true] #aiChat .aiAnswer,html[data-privacy=true] #smartRows,html[data-privacy=true] #smartText,html[data-privacy=true] #aiQuestion,html[data-privacy=true] #expenseValue,html[data-privacy=true] #budgetFields input{visibility:hidden}html[data-privacy=true] .bar i{visibility:hidden}html[data-privacy=true] #aiChat::before{content:'Conversa oculta pelo modo privacidade.';display:block;padding:12px}#settingsPanel :focus-visible{outline:3px solid #f0284a;outline-offset:3px}

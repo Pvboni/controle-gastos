@@ -1,4 +1,4 @@
-# Controle de Gastos — V1.9.3 (homologação)
+# Controle de Gastos — V1.9.4 (desenvolvimento)
 Aplicação estática de orçamento mensal com lançamento manual/inteligente e assistente financeiro. Produção permanece na main até aprovação.
 ## Arquitetura
 - index.html: estrutura; css/variables.css e layout.css: estilos.
@@ -12,3 +12,6 @@ Node 22 e Python 3. Execute npm install, npm test, npx playwright install chromi
 Exportar backup local antes de descartar pendências. Comparar versões e renovar autorização quando necessário. A fila usa localStorage e Web Locks; navegadores sem Web Locks não gravam. O cache não é criptografado. Não compartilhar arquivos de backup.
 ## Publicação
 Exigir testes verdes, backup independente verificado, homologação offline/concorrência/Worker e revisão do diff. Não fazer merge automático. Não substituir gastos.json por snapshot antigo. Confirmar Pages após merge. Em regressão, reverter somente commits de código, preservando dados.
+
+## Experiência premium
+Tema automático/claro/escuro, Inter e Phosphor via CDN, navegação mobile, bottom sheet, toast, confirmações assíncronas e sugestões do assistente. 65 cenários determinísticos passaram em ambiente JS isolado; Playwright, backup independente e baseline Lighthouse ainda pendentes. Não publicar antes da homologação.
