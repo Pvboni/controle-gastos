@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test';
 const fixture={inicio:'2026-12',orcamento:{Mercado:4500,iFood:500,'Farmácia':500,Transporte:800},meses:{},lancamentos:[{id:'a',data:'2026-12-02',categoria:'iFood',valor:580,local:'Frangão',descricao:''}]};
-test.beforeEach(async({page})=>{await page.route('https://api.github.com/**',async route=>{if(route.request().method()!=='GET')return route.abort();await route.fulfill({json:{sha:'fixture123',content:Buffer.from(JSON.stringify(fixture)).toString('base64')}})});await page.route('https://**/*.workers.dev/**',r=>r.abort());await page.goto('/');await expect(page.locator('#status')).toContainText('Sincronizado');});
+test.beforeEach(async({page})=>{await page.route('**/*',async route=>{const request=route.request(),url=new URL(request.url());if(url.origin==='http://127.0.0.1:8765' && request.method()==='GET')return route.continue();if(url.origin==='https://api.github.com' && url.pathname==='/repos/Pvboni/controle-gastos/contents/gastos.json' && request.method()==='GET')return route.fulfill({json:{sha:'fixture123',content:Buffer.from(JSON.stringify(fixture)).toString('base64')}});return route.abort()});await page.goto('/');await expect(page.locator('#status')).toContainText('Sincronizado');});
 test('saldo mensal',async({page})=>{await expect(page.locator('#summary')).toContainText('5.720,00')});
 test('quatro categorias',async({page})=>{await expect(page.locator('#cards .tile')).toHaveCount(4)});
 test('lançamento existente',async({page})=>{await expect(page.locator('#ledgers')).toContainText('Frangão')});
