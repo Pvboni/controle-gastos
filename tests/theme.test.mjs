@@ -8,7 +8,7 @@ function setup(saved, prefersDark = false, storageFails = false) {
   let stored = saved, change, ready, selectChange;
   const media = {matches: prefersDark, addEventListener: (_, fn) => { change = fn; }};
   const select = {value: '', addEventListener: (_, fn) => { selectChange = fn; }};
-  const document = {documentElement: {dataset:{}}, getElementById: () => select, addEventListener: (_, fn) => { ready = fn; }};
+  const document = {documentElement: {dataset:{}}, getElementById: id => id === 'themeMode' ? select : null, addEventListener: (_, fn) => { ready = fn; }};
   const localStorage = {getItem: () => {if(storageFails) throw Error(); return stored;}, setItem: (_, value) => {if(storageFails) throw Error(); stored = value;}};
   vm.runInNewContext(source, {document, localStorage, window:{matchMedia:()=>media}});
   ready();

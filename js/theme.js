@@ -14,6 +14,16 @@
   apply();
   media.addEventListener('change', apply);
   document.addEventListener('DOMContentLoaded', function () {
+    const status = document.getElementById('status');
+    const summary = document.getElementById('summary');
+    if (status && summary) {
+      new MutationObserver(function () {
+        const loading = summary.querySelector('.loading-placeholder');
+        if (loading && /não foi possível|falha/i.test(status.textContent)) {
+          loading.textContent = 'Não foi possível carregar o resumo. Confira a conexão e tente atualizar.';
+        }
+      }).observe(status, {childList:true, characterData:true, subtree:true});
+    }
     const selector = document.getElementById('themeMode');
     if (!selector) return;
     selector.value = mode;
