@@ -1,0 +1,13 @@
+import {test,expect} from '@playwright/test';
+const fixture={inicio:'2026-12',orcamento:{Mercado:4500,iFood:500,'Farmácia':500,Transporte:800},meses:{},lancamentos:[{id:'a',data:'2026-12-02',categoria:'iFood',valor:580,local:'Frangão',descricao:''}]};
+test.beforeEach(async({page})=>{await page.route('https://api.github.com/**',async route=>{if(route.request().method()!=='GET')return route.abort();await route.fulfill({json:{sha:'fixture123',content:Buffer.from(JSON.stringify(fixture)).toString('base64')}})});await page.route('https://**/*.workers.dev/**',r=>r.abort());await page.goto('/');await expect(page.locator('#status')).toContainText('Sincronizado');});
+test('saldo mensal',async({page})=>{await expect(page.locator('#summary')).toContainText('5.720,00')});
+test('quatro categorias',async({page})=>{await expect(page.locator('#cards .tile')).toHaveCount(4)});
+test('lançamento existente',async({page})=>{await expect(page.locator('#ledgers')).toContainText('Frangão')});
+test('mês seguinte',async({page})=>{await page.locator('#next').click();await expect(page.locator('#month')).toContainText(/janeiro/i)});
+test('retorno de mês',async({page})=>{await page.locator('#next').click();await page.locator('#prev').click();await expect(page.locator('#month')).toContainText(/dezembro/i)});
+test('novo lançamento',async({page})=>{await page.locator('#newEntry').click();await expect(page.locator('#smartDialog')).toBeVisible()});
+test('formulário manual',async({page})=>{await page.locator('#newEntry').click();await page.locator('#switchManual').click();await expect(page.locator('#expenseDialog')).toBeVisible()});
+test('editar orçamento',async({page})=>{await page.locator('#editBudget').click();await expect(page.locator('#budgetDialog')).toBeVisible()});
+test('aba IA',async({page})=>{await page.locator('#tabAI').click();await expect(page.locator('#assistantPanel')).toBeVisible()});
+test('controles de recuperação',async({page})=>{await expect(page.getByRole('button',{name:'Comparar versões'})).toBeVisible();await expect(page.getByRole('button',{name:'Backup local'})).toBeVisible()});

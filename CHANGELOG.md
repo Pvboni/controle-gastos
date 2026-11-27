@@ -1,0 +1,12 @@
+# Changelog
+## 1.9.3 — em homologação
+- Modularização do HTML, JavaScript e CSS; componentes de cards e lançamentos.
+- Motor compartilhado de saldo, projeção e limites; arredondamento em centavos.
+- Cache e fila offline, reconciliação por ID e mês, retry e controles de recuperação.
+- Identificadores determinísticos para registros legados e proteção Web Locks.
+- 65 cenários determinísticos e 20 execuções Playwright planejadas.
+- CI de qualidade sem publicação automática.
+### Pendências
+Backup independente real, testes integrados de escrita/offline/concorrência, Worker real, revisão de segurança e homologação visual. Cache sem criptografia; resolução de conflito limitada. Nenhuma migração D1 ou autenticação nova.
+## 1.9.2
+Assistente humanizado, planejamento semanal e tratamento de ambiguidades.
