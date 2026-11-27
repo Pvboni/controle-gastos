@@ -1,4 +1,9 @@
 # Changelog
+### V1.9.4 — fase 6
+- Central de ajustes, preferências locais, privacidade visual, navegação por teclado e áreas de toque.
+- 10 testes de preferências e mascaramento adicionados; execução isolada aprovada.
+- Pendências: fontes e ícones locais, auditoria Lighthouse, testes reais de navegador e validação integral de privacidade e contraste. Não homologado.
+
 ## 1.9.4 — desenvolvimento
 - Tema persistente, cards, navegação mobile, bottom sheet, skeleton e estados vazios.
 - Toast, confirmações assíncronas e sugestões contextuais do assistente.
