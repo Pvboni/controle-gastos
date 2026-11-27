@@ -1,4 +1,11 @@
 # Changelog
+## 1.9.4 — desenvolvimento
+- Tema persistente, cards, navegação mobile, bottom sheet, skeleton e estados vazios.
+- Toast, confirmações assíncronas e sugestões contextuais do assistente.
+- Inter e Phosphor via CDN; carregamento real pendente de validação.
+- 65/65 cenários determinísticos aprovados em execução isolada; motor financeiro, sincronização e Worker idênticos à main.
+- Pendentes: backup independente, Playwright, Lighthouse, configurações e privacidade, homologação e publicação.
+
 ## 1.9.3 — em homologação
 - Modularização do HTML, JavaScript e CSS; componentes de cards e lançamentos.
 - Motor compartilhado de saldo, projeção e limites; arredondamento em centavos.
