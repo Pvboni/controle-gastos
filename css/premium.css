@@ -1,0 +1,16 @@
+:root { color-scheme: light; }
+html[data-theme="dark"] { color-scheme: dark; --ice:#141b27; --slate:#e6e9ee; --paper:#202b3b; --border:#77859a; --muted:#c1cad7; }
+body { font-family: Inter, system-ui, -apple-system, sans-serif; }
+.theme-control { display:flex; align-items:center; gap:8px; margin:12px 0; font-size:14px; }
+.theme-control select { font:inherit; padding:8px; min-height:44px; border:1px solid var(--border); border-radius:var(--radius-control); background:var(--paper); color:var(--slate); }
+html[data-theme="dark"] button { background:#34445a; color:#fff; }
+html[data-theme="dark"] .summary, html[data-theme="dark"] .tile, html[data-theme="dark"] .tile.light, html[data-theme="dark"] #smartImpact, html[data-theme="dark"] #undoBox { background:#2a3547; color:#fff; }
+html[data-theme="dark"] .ledger { border-color:#536176; }
+html[data-theme="dark"] .ledger>.line, html[data-theme="dark"] .entry { border-color:#536176; }
+html[data-theme="dark"] .riskText, html[data-theme="dark"] .ledger .red { color:#ff92a4!important; }
+html[data-theme="dark"] #newEntry, html[data-theme="dark"] #sync, html[data-theme="dark"] #smartDialog #smartSave, html[data-theme="dark"] #smartDialog .smartTabs button:first-child { background:#f0284a; color:#182231; }
+html[data-theme="dark"] #local, html[data-theme="dark"] #editBudget, html[data-theme="dark"] .editEntry { background:transparent; color:var(--slate); }
+html[data-theme="dark"] dialog input, html[data-theme="dark"] #expenseForm select, html[data-theme="dark"] #smartDialog textarea, html[data-theme="dark"] #smartDialog select { background:#141b27; color:#fff; }
+:focus-visible { outline:3px solid #f0284a; outline-offset:3px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior:auto!important; transition-duration:0.01ms!important; animation-duration:0.01ms!important; animation-iteration-count:1!important; } }
+
