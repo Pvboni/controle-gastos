@@ -110,6 +110,14 @@
       "descricao": "taxi",
       "valor": 150,
       "data": "2027-01-08"
+    },
+    {
+      "id": "3b7a38c9-c68d-439c-8c10-12b8558aec6e",
+      "data": "2026-12-01",
+      "categoria": "Transporte",
+      "local": "Uber",
+      "descricao": "",
+      "valor": 150
     }
   ]
 }
